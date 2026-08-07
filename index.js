@@ -114,7 +114,7 @@ const sql = mysql2.createPool ({
 host: "benserverplex.ddns.net",
 database: "alunos_filmes03TA",
 user: "aluno_projetos",
-password: "aluno@projeto"
+password: "aluno@filmes"
 
 
 })
