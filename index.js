@@ -18,8 +18,8 @@ app.get("/all-tasks", (request, response) => {
 })
 
 
-app.get("/active-tasks", (request, response) => {
-  const selectCommand = "SELECT * FROM filmes_LeonardoBragadeSouza WHERE status = 0"
+app.get("/filmes", (request, response) => {
+  const selectCommand = "SELECT * FROM filmes_LeonardoBragadeSouza"
 
   sql.query(selectCommand, (error, data) => {
       if (error) {
@@ -33,7 +33,7 @@ app.get("/active-tasks", (request, response) => {
 
 
 app.get("/completed-tasks", (request, response) => {
-  const selectCommand = "SELECT * FROM filmes_LeonardoBragadeSouza WHERE status = 1"
+  const selectCommand = "SELECT * FROM filmes_LeonardoBragadeSouza"
 
   sql.query(selectCommand, (error, data) => {
       if (error) {
@@ -46,13 +46,13 @@ app.get("/completed-tasks", (request, response) => {
 })
 
 
-app.post("/create-task", (request, response) => {
+app.post("/create-movie", (request, response) => {
 
-   const {description, status} = request.body
+   const {titulo, genero, duracao, ClassificacaoEtaria} = request.body
 
-   const insertCommand = "INSERT INTO filmes_LeonardoBragadeSouza(description, status) VALUES(?, ?)"
+   const insertCommand = "INSERT INTO filmes_LeonardoBragadeSouza(titulo, genero, duracao, ClassificacaoEtaria) VALUES(?, ?, ?, ?)"
    
-   sql.query(insertCommand, [description, status], (error) => {
+   sql.query(insertCommand, [titulo, genero, duracao, ClassificacaoEtaria], (error) => {
 
     if (error) {
 
@@ -62,7 +62,7 @@ app.post("/create-task", (request, response) => {
 
    response.status(201).json({
 
-   message: "Tarefa finalizada com sucesso!"
+   message: "Filme cadastrado com sucesso!"
 
    })
 
@@ -91,7 +91,7 @@ app.delete("/delete-task/:id", (request, response) => {
 
        response.json({
 
-        message:"Tarefa apagada com sucesso!"
+        message:"Filme apagado com sucesso!"
 
 
        })
@@ -113,8 +113,8 @@ const sql = mysql2.createPool ({
 
 host: "benserverplex.ddns.net",
 database: "alunos_filmes03TA",
-user: "aluno_filmes",
-password: "aluno@filmes"
+user: "alunos",
+password: "senhaAlunos"
 
 
 })
