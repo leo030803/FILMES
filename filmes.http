@@ -17,10 +17,10 @@ Content-Type: application/json
 
 {
 
-   "titulo": "Velozes e Furiosos 2",
-   "genero": "Ação",
-   "duracao": "107 ",
-   "ClassificacaoEtaria": "14 anos"
+   "titulo": "Carros 2",
+   "genero": "Corrida",
+   "duracao": "105 ",
+   "ClassificacaoEtaria": "Livre"
 
 }
 
