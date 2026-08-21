@@ -1,18 +1,18 @@
-GET http://localhost:6666/all-tasks
+GET http://localhost:8000/all-movies
 
 ###
 
-GET http://localhost:6666/filmes
+GET http://localhost:8000/filmes
 
 ###
 
-GET http://localhost:6666/completed-tasks
+GET http://localhost:8000/completed-tasks
 
 
 ###
 
 
-POST http://localhost:6666/create-movie
+POST http://localhost:8000/create-movie
 Content-Type: application/json
 
 {
@@ -28,5 +28,5 @@ Content-Type: application/json
 ###
 
 
-DELETE http://localhost:6666/delete-task/11
+DELETE http://localhost:8000/delete-task/11
 

@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.get("/all-tasks", (request, response) => {
+app.get("/all-movies", (request, response) => {
   const selectCommand = "SELECT * FROM filmes_LeonardoBragadeSouza"
 
   sql.query(selectCommand, (error, data) => {
@@ -107,8 +107,8 @@ app.delete("/delete-task/:id", (request, response) => {
 })
 
 
-app.listen(6666, () => {
-    console.log("Servidor rodando na porta 6666")
+app.listen(8000, () => {
+    console.log("Servidor rodando na porta 8000")
 })
 
 
