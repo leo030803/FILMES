@@ -1,6 +1,6 @@
 async function buscarFilmes() {
     // acessar a rota GET do backend, trazer os filmes e inserir os filmes no HTML
-    const resposta = await fetch("http://localhost:8000/all-movies") // JSON
+    const resposta = await fetch("https://filmes-leo-erick.vercel.app/all-movies") // JSON
     const filmes = await resposta.json() // converter o JSON em objeto javascript
     const sectionFilmes = document.querySelector(".filmes")
 
