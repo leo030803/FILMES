@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filmes | Cinemateca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="pagina topo-int">
+      <a class="marca" href="index.html">Cinemark</a>
+      <nav aria-label="Principal">
+        <a href="index.html" aria-current="page">Filmes</a>
+        <a href="cadastrar.html">Cadastrar filme</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <div class="cabecalho">
+      <div>
+        <h1>Seus filmes</h1>
+        <p id="contagem" class="suave"></p>
+      </div>
+      <a class="btn" href="cadastrar.html">Cadastrar filme</a>
+    </div>
+
+    <div class="busca">
+      <label for="busca">Buscar por título, direção ou gênero</label>
+      <input id="busca" type="search" autocomplete="off">
+    </div>
+
+    <ul id="lista" class="grade"></ul>
+
+    <div id="vazio" class="vazio" hidden>
+      <h2 id="vazio-titulo"></h2>
+      <p id="vazio-texto" class="suave"></p>
+      <a id="vazio-acao" class="btn" href="cadastrar.html">Cadastrar filme</a>
+    </div>
+  </main>
+
+  <dialog id="dialogo-apagar" aria-labelledby="dialogo-titulo">
+    <form method="dialog">
+      <h2 id="dialogo-titulo">Apagar filme?</h2>
+      <p id="dialogo-texto"></p>
+      <div class="dialogo-acoes">
+        <button class="btn btn-contorno" value="cancelar">Cancelar</button>
+        <button class="btn btn-perigo" value="apagar">Apagar filme</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
